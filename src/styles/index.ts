@@ -15,7 +15,8 @@ export const Cores = {
   corTextoPrincipal: '#000000',
   backgroundBotaoVoltar: '#2F3640',
   backgroundBarraLateral: '#EEE',
-  corCampoInput: '#666666'
+  corCampoInput: '#666666',
+  corTextarea: '#8B8B8B'
 }
 
 export type Theme = {
@@ -34,6 +35,7 @@ export type Theme = {
   backgroundBotaoVoltar: string
   backgroundBarraLateral: string
   corCampoInput: string
+  corTextarea: string
 }
 
 export const Fonts = {
@@ -44,10 +46,13 @@ export const Fonts = {
   textoBotaoSecundario: '10px'
 }
 const EstiloGlobal = createGlobalStyle`
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  list-style: none;
+}
 `
 
 export const Container = styled.div`

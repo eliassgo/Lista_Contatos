@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { Fonts } from '../../styles'
 import { Props } from '.'
 
-export const Card = styled.div<Props>`
+type PropsSemLegendaEContador = Omit<Props, 'contador' | 'legenda'>
+
+export const Card = styled.div<PropsSemLegendaEContador>`
   padding: 8px;
   border: 1px solid
     ${(props) => (props.ativo ? props.theme.corActive : props.theme.corBordas)};
