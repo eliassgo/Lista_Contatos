@@ -4,15 +4,19 @@ import EstiloGlobal, { Container, Cores } from './styles'
 
 import BarraLateral from './containers/BarraLateral'
 import ListaDeTarefas from './containers/ListaDeTarefas'
+import store from './store'
+import { Provider } from 'react-redux'
 function App() {
   return (
-    <ThemeProvider theme={Cores}>
-      <EstiloGlobal />
-      <Container>
-        <BarraLateral />
-        <ListaDeTarefas />
-      </Container>
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={Cores}>
+        <EstiloGlobal />
+        <Container>
+          <BarraLateral />
+          <ListaDeTarefas />
+        </Container>
+      </ThemeProvider>
+    </Provider>
   )
 }
 

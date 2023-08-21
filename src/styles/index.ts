@@ -6,10 +6,10 @@ export const Cores = {
   corBackgroundActive: '#fff',
   corBackgroundCard: '#FCFCFC',
   corTextoTerciario: '#5E5E5E',
-  corBotaoImportante: '#E1A32A',
-  corBotaoPendente: '#F0C11A',
+  amareloEscuro: '#E1A32A',
+  amarelo: '#F0C11A',
   corBotaoEditar: '#2F3640',
-  corBotaoRemECan: '#C23616',
+  vermelho: '#C23616',
   corBotaoSalvar: '#44BD32',
   corTextoSecundario: '#8B8B8B',
   corTextoPrincipal: '#000000',
@@ -25,10 +25,10 @@ export type Theme = {
   corBackgroundCard: string
   corBackgroundActive: string
   corTextoTerciario: string
-  corBotaoImportante: string
-  corBotaoPendente: string
+  amareloEscuro: string
+  amarelo: string
   corBotaoEditar: string
-  corBotaoRemECan: string
+  vermelho: string
   corBotaoSalvar: string
   corTextoSecundario: string
   corTextoPrincipal: string

@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 import { Fonts } from '../../styles'
-import { Props } from '.'
 
-type PropsSemLegendaEContador = Omit<Props, 'contador' | 'legenda'>
+type Props = {
+  ativo: boolean
+}
 
-export const Card = styled.div<PropsSemLegendaEContador>`
+export const Card = styled.div<Props>`
   padding: 8px;
   border: 1px solid
     ${(props) => (props.ativo ? props.theme.corActive : props.theme.corBordas)};
@@ -15,6 +16,7 @@ export const Card = styled.div<PropsSemLegendaEContador>`
   color: ${(props) =>
     props.ativo ? props.theme.corActive : props.theme.corTextoTerciario};
   border-radius: 8px;
+  cursor: pointer;
 `
 export const Contador = styled.div`
   font-weight: bold;

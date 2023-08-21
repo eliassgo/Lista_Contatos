@@ -1,6 +1,24 @@
 import styled from 'styled-components'
-import { Fonts } from '../../styles'
+import { Fonts, Cores } from '../../styles'
+import * as enums from '../../utils/enums/Tarefas'
 
+type TagProps = {
+  prioridade?: enums.Prioridade
+  status?: enums.Status
+  parametro: 'status' | 'prioridade'
+}
+
+function retornaCorDeFundo(props: TagProps): string {
+  if (props.parametro === 'prioridade') {
+    if (props.prioridade === enums.Prioridade.URGENTE) return Cores.vermelho
+    if (props.prioridade === enums.Prioridade.IMPORTANTE)
+      return Cores.amareloEscuro
+  } else {
+    if (props.status === enums.Status.PENDENTE) return Cores.amarelo
+    if (props.status === enums.Status.CONCLUIDA) return Cores.corBotaoSalvar
+  }
+  return Cores.corTextoSecundario
+}
 export const Card = styled.div`
   background-color: ${(props) => props.theme.corBackgroundCard};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -15,11 +33,11 @@ export const Titulo = styled.h3`
   font-weight: bold;
 `
 
-export const Tag = styled.span`
+export const Tag = styled.span<TagProps>`
   padding: 4px 8px;
   color: #fff;
   font-weight: bold;
-  background-color: ${(props) => props.theme.corBotaoImportante};
+  background-color: ${(props) => retornaCorDeFundo(props)};
   border-radius: 8px;
   margin-right: 16px;
   margin-top: 16px;
@@ -36,6 +54,7 @@ export const Descricao = styled.textarea`
   width: 100%;
   margin: 16px 0;
   resize: none;
+  border: none;
 `
 
 export const BarraAcoes = styled.div`
@@ -50,7 +69,14 @@ export const Botao = styled.button`
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  background-color: ${(props) => props.theme.corBotaoRemECan};
+  background-color: ${(props) => props.theme.corBotaoEditar};
   margin-right: 8px;
   border-radius: 8px;
+`
+
+export const BotaoSalver = styled(Botao)`
+  background-color: ${(props) => props.theme.corBotaoSalvar};
+`
+export const BotaoCancelarERemover = styled(Botao)`
+  background-color: ${(props) => props.theme.vermelho};
 `
