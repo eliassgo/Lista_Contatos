@@ -12,12 +12,3 @@ export const Filtros = styled.div`
   grid-gap: 8px;
   margin-top: 16px;
 `
-export const Campo = styled.input`
-  width: 100%;
-  padding: 8px;
-  border-radius: 8px;
-  font-weight: bold;
-  background-color: ${(props) => props.theme.corBackgroundActive};
-  color: ${(props) => props.theme.corCampoInput};
-  border-color: ${(props) => props.theme.corCampoInput};
-`

@@ -10,26 +10,41 @@ const initialState: TarefaState = {
   itens: [
     {
       titulo: 'Estudar Inglês',
-      prioridade: enums.Prioridade.NORMAL,
+      prioridade: enums.Prioridade.IMPORTANTE,
       status: enums.Status.PENDENTE,
       descricao: 'ver vídeo',
       id: 1
     },
 
     {
-      titulo: 'Continuar Projeto 7 days of codee',
+      titulo: 'Iniciar BootCamp Santander',
       prioridade: enums.Prioridade.IMPORTANTE,
-      status: enums.Status.PENDENTE,
-      descricao: 'ver e-mail',
+      status: enums.Status.CONCLUIDA,
+      descricao: 'Acessar Plataforma',
       id: 2
     },
 
     {
-      titulo: 'Fazer atividades FIAP',
-      prioridade: enums.Prioridade.IMPORTANTE,
-      status: enums.Status.PENDENTE,
+      titulo: 'Ver Capitulo de lógica com python',
+      prioridade: enums.Prioridade.NORMAL,
+      status: enums.Status.CONCLUIDA,
       descricao: 'ver conteúdos',
       id: 3
+    },
+
+    {
+      titulo: 'Colocar roupa para lavar',
+      prioridade: enums.Prioridade.NORMAL,
+      status: enums.Status.PENDENTE,
+      descricao: '',
+      id: 4
+    },
+    {
+      titulo: 'Pagar boleto Provi',
+      prioridade: enums.Prioridade.URGENTE,
+      status: enums.Status.PENDENTE,
+      descricao: 'Email',
+      id: 4
     }
   ]
 }

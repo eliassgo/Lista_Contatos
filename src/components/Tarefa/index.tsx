@@ -5,6 +5,7 @@ import * as S from './styles'
 
 import { remover, editar } from '../../store/reducers/terefas'
 import TarefaClass from '../../models/Tarefas'
+import { BotaoSalver } from '../../styles'
 
 type Props = TarefaClass
 
@@ -48,7 +49,7 @@ const Tarefa = ({
         {/* Condicional para verificar se está editando, se sim botao salvar e cancelar, não editar remover */}
         {estaEditando ? (
           <>
-            <S.BotaoSalver
+            <BotaoSalver
               onClick={() => {
                 dispatch(
                   editar({
@@ -63,7 +64,7 @@ const Tarefa = ({
               }}
             >
               Salvar
-            </S.BotaoSalver>
+            </BotaoSalver>
             <S.BotaoCancelarERemover onClick={cancelarEdicao}>
               Cancelar
             </S.BotaoCancelarERemover>

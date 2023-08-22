@@ -5,6 +5,7 @@ import { alterarTermo } from '../../store/reducers/filtros'
 
 import * as S from './styles'
 import * as enums from '../../utils/enums/Tarefas'
+import { Campo } from '../../styles'
 
 const BarraLateral = () => {
   const dispatch = useDispatch()
@@ -13,9 +14,10 @@ const BarraLateral = () => {
   return (
     <S.Aside>
       <div>
-        <S.Campo
+        <Campo
           type="text"
           placeholder="Buscar"
+          value={termo}
           onChange={(evento) => dispatch(alterarTermo(evento.target.value))}
         />
         <S.Filtros>
@@ -30,22 +32,22 @@ const BarraLateral = () => {
             legenda="concluídas"
           />
           <FiltroCard
+            valor={enums.Prioridade.URGENTE}
+            criterio="prioridade"
+            legenda="urgente"
+          />
+          <FiltroCard
             valor={enums.Prioridade.IMPORTANTE}
             criterio="prioridade"
-            legenda="urgentes"
+            legenda="importante"
           />
           <FiltroCard
-            valor={enums.Status.PENDENTE}
-            criterio="prioridade"
-            legenda="importantes"
-          />
-          <FiltroCard
-            valor={enums.Prioridade.URGENTE}
+            valor={enums.Prioridade.NORMAL}
             criterio="prioridade"
             legenda="normal"
           />
           <FiltroCard
-            valor={enums.Prioridade.IMPORTANTE}
+            valor={enums.Status.PENDENTE}
             criterio="todas"
             legenda="todas"
           />

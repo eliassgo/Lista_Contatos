@@ -73,10 +73,6 @@ export const Botao = styled.button`
   margin-right: 8px;
   border-radius: 8px;
 `
-
-export const BotaoSalver = styled(Botao)`
-  background-color: ${(props) => props.theme.corBotaoSalvar};
-`
 export const BotaoCancelarERemover = styled(Botao)`
   background-color: ${(props) => props.theme.vermelho};
 `

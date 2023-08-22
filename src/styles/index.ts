@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import { Botao } from '../components/Tarefa/styles'
 
 export const Cores = {
   corBordas: '#A1A1A1',
@@ -39,11 +40,11 @@ export type Theme = {
 }
 
 export const Fonts = {
-  textoTerciario: '24px',
-  textoSecundario: '14px',
-  textoPrincipal: '18px',
-  textoBotaoPrimario: '12px',
-  textoBotaoSecundario: '10px'
+  textoTerciario: '1.5rem',
+  textoSecundario: '0.875rem',
+  textoPrincipal: '1.125rem',
+  textoBotaoPrimario: '0.75rem',
+  textoBotaoSecundario: '0.625rem'
 }
 const EstiloGlobal = createGlobalStyle`
 *{
@@ -61,3 +62,30 @@ export const Container = styled.div`
 `
 
 export default EstiloGlobal
+
+export const MainContainer = styled.main`
+  padding: 0 40px;
+  height: 100vh;
+  overflow-y: scroll;
+`
+
+export const Titulo = styled.p`
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1.125rem;
+  font-weight: bold;
+`
+export const Campo = styled.input`
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: bold;
+  background-color: ${(props) => props.theme.corBackgroundActive};
+  color: ${(props) => props.theme.corCampoInput};
+  border-color: ${(props) => props.theme.corCampoInput};
+`
+
+export const BotaoSalver = styled(Botao)`
+  background-color: ${(props) => props.theme.corBotaoSalvar};
+`
