@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Fonts, Cores } from '../../styles'
+import { Cores } from '../../styles'
 import * as enums from '../../utils/enums/Tarefas'
 
 type TagProps = {
@@ -26,11 +26,17 @@ export const Card = styled.div`
   margin-bottom: 32px;
   margin-top: 40px;
   border-radius: 0px 0px 16px 16px;
+
+  label {
+    display: flex;
+    align-items: center;
+  }
 `
 
 export const Titulo = styled.h3`
-  font-size: ${Fonts.textoPrincipal};
+  font-size: 1.125rem;
   font-weight: bold;
+  margin-left: 5px;
 `
 
 export const Tag = styled.span<TagProps>`
@@ -47,7 +53,7 @@ export const Tag = styled.span<TagProps>`
 export const Descricao = styled.textarea`
   color: ${(props) => props.theme.corTextarea};
   font-family: 'Roboto Mono', monospace;
-  font-size: ${Fonts.textoSecundario};
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 24px;
   display: block;
@@ -63,7 +69,7 @@ export const BarraAcoes = styled.div`
 `
 
 export const Botao = styled.button`
-  font-size: ${Fonts.textoBotaoPrimario};
+  font-size: 0.75rem;
   font-weight: bold;
   color: ${(props) => props.theme.corBackgroundActive};
   padding: 8px 12px;

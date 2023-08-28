@@ -5,7 +5,7 @@ import * as S from './styles'
 
 import { remover, editar } from '../../store/reducers/terefas'
 import TarefaClass from '../../models/Tarefas'
-import { BotaoSalver } from '../../styles'
+import { BotaoSalvar } from '../../styles'
 
 type Props = TarefaClass
 
@@ -32,7 +32,10 @@ const Tarefa = ({
   }
   return (
     <S.Card>
-      <S.Titulo>{titulo}</S.Titulo>
+      <label htmlFor={titulo}>
+        <input type="checkbox" id={titulo} />
+        <S.Titulo>{titulo}</S.Titulo>
+      </label>
       <S.Tag parametro="prioridade" prioridade={prioridade}>
         {prioridade}
       </S.Tag>
@@ -49,7 +52,7 @@ const Tarefa = ({
         {/* Condicional para verificar se está editando, se sim botao salvar e cancelar, não editar remover */}
         {estaEditando ? (
           <>
-            <BotaoSalver
+            <BotaoSalvar
               onClick={() => {
                 dispatch(
                   editar({
@@ -64,7 +67,7 @@ const Tarefa = ({
               }}
             >
               Salvar
-            </BotaoSalver>
+            </BotaoSalvar>
             <S.BotaoCancelarERemover onClick={cancelarEdicao}>
               Cancelar
             </S.BotaoCancelarERemover>

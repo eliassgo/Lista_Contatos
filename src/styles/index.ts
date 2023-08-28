@@ -46,6 +46,7 @@ export const Fonts = {
   textoBotaoPrimario: '0.75rem',
   textoBotaoSecundario: '0.625rem'
 }
+
 const EstiloGlobal = createGlobalStyle`
 *{
   margin: 0;
@@ -69,7 +70,7 @@ export const MainContainer = styled.main`
   overflow-y: scroll;
 `
 
-export const Titulo = styled.p`
+export const Titulo = styled.h2`
   display: block;
   margin-top: 40px;
   margin-bottom: 40px;
@@ -86,6 +87,6 @@ export const Campo = styled.input`
   border-color: ${(props) => props.theme.corCampoInput};
 `
 
-export const BotaoSalver = styled(Botao)`
+export const BotaoSalvar = styled(Botao)`
   background-color: ${(props) => props.theme.corBotaoSalvar};
 `
