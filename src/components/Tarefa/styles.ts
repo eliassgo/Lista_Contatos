@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Cores } from '../../styles'
+import { Botao, Cores } from '../../styles'
 import * as enums from '../../utils/enums/Tarefas'
 
 type TagProps = {
@@ -36,7 +36,7 @@ export const Card = styled.div`
 export const Titulo = styled.h3`
   font-size: 1.125rem;
   font-weight: bold;
-  margin-left: 5px;
+  margin-left: 8px;
 `
 
 export const Tag = styled.span<TagProps>`
@@ -68,17 +68,6 @@ export const BarraAcoes = styled.div`
   padding-top: 16px;
 `
 
-export const Botao = styled.button`
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: ${(props) => props.theme.corBackgroundActive};
-  padding: 8px 12px;
-  border: none;
-  cursor: pointer;
-  background-color: ${(props) => props.theme.corBotaoEditar};
-  margin-right: 8px;
-  border-radius: 8px;
-`
 export const BotaoCancelarERemover = styled(Botao)`
   background-color: ${(props) => props.theme.vermelho};
 `

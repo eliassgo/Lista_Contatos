@@ -1,5 +1,4 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import { Botao } from '../components/Tarefa/styles'
 
 export const Cores = {
   corBordas: '#A1A1A1',
@@ -87,6 +86,17 @@ export const Campo = styled.input`
   border-color: ${(props) => props.theme.corCampoInput};
 `
 
+export const Botao = styled.button`
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: ${(props) => props.theme.corBackgroundActive};
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background-color: ${(props) => props.theme.corBotaoEditar};
+  margin-right: 8px;
+  border-radius: 8px;
+`
 export const BotaoSalvar = styled(Botao)`
   background-color: ${(props) => props.theme.corBotaoSalvar};
 `
