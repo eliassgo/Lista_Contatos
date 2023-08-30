@@ -1,7 +1,11 @@
 import { Provider } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import EstiloGlobal from './styles/styles'
+import EstiloGlobal, { Container } from './styles/styles'
+import Header from './containers/Header'
+import ListaDeContatos from './containers/ListaDeContatos'
+import CampoPesquisar from './components/CampoPesquisar'
+import BotaoAdicionar from './components/BotaoAdicionar'
 
 const rotas = createBrowserRouter([
   {
@@ -14,6 +18,12 @@ function App() {
   return (
     <>
       <EstiloGlobal />
+      <Header />
+      <Container>
+        <CampoPesquisar />
+        <ListaDeContatos />
+        <BotaoAdicionar />
+      </Container>
     </>
   )
 }
