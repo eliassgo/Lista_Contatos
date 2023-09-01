@@ -2,11 +2,36 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Home from './page/Home'
+import Editar from './page/Editar'
+import Adicionar from './page/Adicionar'
+
+const rotas = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      },
+      {
+        path: '/editar',
+        element: <Editar />
+      },
+      {
+        path: '/adicionar',
+        element: <Adicionar />
+      }
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={rotas} />
   </React.StrictMode>
 )
 

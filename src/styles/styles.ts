@@ -10,8 +10,8 @@ const EstiloGlobal = createGlobalStyle`
 }
 
 body{
-
   background-color: #121d2b;
+  margin-bottom: 20px;
 }
 `
 export default EstiloGlobal
@@ -20,4 +20,15 @@ export const Container = styled.div`
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
+`
+
+export const Botao = styled.button`
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  border-radius: 8px;
 `

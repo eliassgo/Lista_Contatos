@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
 import { Container } from '../../styles/styles'
+import { Link } from 'react-router-dom'
 
 export const Header = styled.header`
   height: 20vh;
@@ -16,7 +16,7 @@ export const ContainerDiv = styled(Container)`
   gap: 8px;
 `
 
-export const Button = styled.button`
+export const Button = styled(Link)`
   border-radius: 8px 8px 0px 0px;
   padding: 12px;
   font-size: 16px;
@@ -28,12 +28,13 @@ export const Button = styled.button`
   cursor: pointer;
   background-color: #f4eeee;
   border: none;
-
+  text-decoration: none;
   &:hover {
     background-color: #121d2b;
     color: #fff;
   }
 `
+
 export const Imagem = styled.div`
   display: flex;
   position: absolute;

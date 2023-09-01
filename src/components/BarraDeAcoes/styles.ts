@@ -1,18 +1,7 @@
-import styled from 'styled-components'
+import { styled } from 'styled-components'
 import { Botao } from '../../styles/styles'
-import { Props } from '.'
 
-export const CardContato = styled.div`
-  margin: 10px 0;
-  border-top: solid 2px #ccc;
-  color: #ccc;
-  padding: 10px 0;
-`
-export const Nome = styled.h3``
-export const Email = styled.h4`
-  opacity: 70%;
-`
-export const Numero = styled.h3``
+import { Props } from '.'
 
 export const BarraAcao = styled.div<Props>`
   border-top: 1px solid rgba(0, 0, 0, 0.1);

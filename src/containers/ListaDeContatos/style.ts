@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
-export const Contatos = styled.div``
+export const MainContainer = styled.div`
+  height: 50vh;
+  overflow-y: scroll;
 
-export const MainContainer = styled.div``
+  &::-webkit-scrollbar {
+    display: none; /* Para navegadores baseados no motor WebKit (Chrome, Safari, etc.) */
+  }
+`

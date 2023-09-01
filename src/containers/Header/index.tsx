@@ -9,8 +9,8 @@ const Header = () => {
           <S.Imagem>
             <img src={Logo} />
           </S.Imagem>
-          <S.Button>Contatos</S.Button>
-          <S.Button>Editar</S.Button>
+          <S.Button to="/">Contatos</S.Button>
+          <S.Button to="/editar">Editar</S.Button>
         </S.ContainerDiv>
       </S.Header>
     </>

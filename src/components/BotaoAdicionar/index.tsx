@@ -3,7 +3,7 @@ import { Botao, BotaoContainer } from './style'
 const BotaoAdicionar = () => {
   return (
     <BotaoContainer>
-      <Botao> + Adicionar contato</Botao>
+      <Botao to="/adicionar">+ Adicionar contato</Botao>
     </BotaoContainer>
   )
 }

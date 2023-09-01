@@ -16,7 +16,7 @@ export const Campo = styled.input`
   border-radius: 40px;
   font-weight: bold;
   background-color: #ccc;
-  color: #000;
+  color: #fff;
   border: 2px solid var(--default-10, rgba(255, 255, 255, 0.1));
   background: var(--default-10, rgba(255, 255, 255, 0.1));
 `

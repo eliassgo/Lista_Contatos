@@ -7,6 +7,10 @@ const ListaDeContatos = () => {
       <Contato />
       <Contato />
       <Contato />
+      <Contato />
+      <Contato />
+      <Contato />
+      <Contato />
     </S.MainContainer>
   )
 }
