@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Botao } from '../../styles/styles'
-import { Props } from '.'
 
 export const CardContato = styled.div`
   margin: 10px 0;
@@ -14,10 +13,10 @@ export const Email = styled.h4`
 `
 export const Numero = styled.h3``
 
-export const BarraAcao = styled.div<Props>`
+export const BarraAcao = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding-top: 16px;
-  display: ${(props) => (props.displayBarra ? props.displayBarra : 'none')};
+  display: block;
 `
 export const BotaoSalvar = styled(Botao)`
   background-color: #44bd32;

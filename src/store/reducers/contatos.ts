@@ -17,30 +17,35 @@ const initialState: ContatoState = {
       nome: 'Elias',
       email: 'elias@gmail.com',
       numero: '98984532123',
+
       id: 2
     },
     {
       nome: 'Elias',
       email: 'elias@gmail.com',
       numero: '98984532123',
+
       id: 3
     },
     {
       nome: 'Elias',
       email: 'elias@gmail.com',
       numero: '98984532123',
+
       id: 4
     },
     {
       nome: 'Elias',
       email: 'elias@gmail.com',
       numero: '98984532123',
+
       id: 5
     },
     {
       nome: 'Elias',
       email: 'elias@gmail.com',
       numero: '98984532123',
+
       id: 6
     }
   ]
