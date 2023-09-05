@@ -7,11 +7,18 @@ export const CardContato = styled.div`
   color: #ccc;
   padding: 10px 0;
 `
-export const Nome = styled.h3``
-export const Email = styled.h4`
-  opacity: 70%;
+export const Nome = styled.textarea`
+  background-color: #121d2b;
+  border: none;
+  font-size: 20px;
+  resize: none;
 `
-export const Numero = styled.h3``
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const Email = styled(Nome)``
+export const Numero = styled(Nome)``
 
 export const BarraAcao = styled.div`
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -25,5 +32,8 @@ export const BotaoRemover = styled(Botao)`
   background-color: #c23616;
 `
 export const BotaoCancelar = styled(Botao)`
+  background-color: #1e90ff;
+`
+export const BotaoEditar = styled(Botao)`
   background-color: #1e90ff;
 `

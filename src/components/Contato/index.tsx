@@ -5,20 +5,32 @@ import * as S from './styles'
 
 import { remover, editar } from '../../store/reducers/contatos'
 import ContatoClass from '../../models/Contato'
-import { Botao } from '../../styles/styles'
 
 type Props = ContatoClass
 
-const Contato = ({ nome: nomeOriginal, email, numero, id }: Props) => {
+const Contato = ({
+  nome: nomeOriginal,
+  email: emailOriginal,
+  numero: numeroOriginal,
+  id
+}: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
+  const [email, setEmail] = useState('')
+  const [numero, setNumero] = useState('')
   const [nome, setNome] = useState('')
 
   useEffect(() => {
-    if (nomeOriginal.length > 0) {
+    if (
+      nomeOriginal.length > 0 &&
+      emailOriginal.length > 0 &&
+      numeroOriginal.length > 0
+    ) {
+      setEmail(emailOriginal)
       setNome(nomeOriginal)
+      setNumero(numeroOriginal)
     }
-  }, [nomeOriginal])
+  }, [nomeOriginal, emailOriginal, numeroOriginal])
 
   function cancelarEdicao() {
     setEstaEditando(false)
@@ -27,24 +39,26 @@ const Contato = ({ nome: nomeOriginal, email, numero, id }: Props) => {
 
   return (
     <S.CardContato>
-      <label htmlFor={nome}>
-        <S.Nome>
-          {estaEditando && <em>Editando: </em>}
-          {nome}
-        </S.Nome>
-      </label>
-      <label htmlFor={email}>
-        <S.Email>
-          {estaEditando && <em>Editando: </em>}
-          {email}
-        </S.Email>
-      </label>
-      <label htmlFor={numero}>
-        <S.Numero>
-          {estaEditando && <em>Editando: </em>}
-          {numero}
-        </S.Numero>
-      </label>
+      <S.Div>
+        <S.Nome
+          disabled={!estaEditando}
+          value={nome}
+          onChange={(evento) => setNome(evento.target.value)}
+        />
+
+        <S.Email
+          disabled={!estaEditando}
+          value={email}
+          onChange={(evento) => setEmail(evento.target.value)}
+        />
+
+        <S.Numero
+          disabled={!estaEditando}
+          value={numero}
+          onChange={(evento) => setNumero(evento.target.value)}
+        />
+      </S.Div>
+
       <S.BarraAcao>
         {estaEditando ? (
           <>
@@ -70,7 +84,9 @@ const Contato = ({ nome: nomeOriginal, email, numero, id }: Props) => {
             <S.BotaoRemover onClick={() => dispatch(remover(id))}>
               Remover
             </S.BotaoRemover>
-            <Botao onClick={() => setEstaEditando(true)}>Editar</Botao>
+            <S.BotaoEditar onClick={() => setEstaEditando(true)}>
+              Editar
+            </S.BotaoEditar>
           </>
         )}
       </S.BarraAcao>

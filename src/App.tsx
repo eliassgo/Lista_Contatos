@@ -1,18 +1,18 @@
 import { Provider } from 'react-redux'
-import { ThemeProvider } from 'styled-components'
 import EstiloGlobal, { Container } from './styles/styles'
 import Header from './containers/Header'
 import { Outlet } from 'react-router-dom'
+import store from './store'
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <EstiloGlobal />
       <Header />
       <Container>
         <Outlet />
       </Container>
-    </>
+    </Provider>
   )
 }
 

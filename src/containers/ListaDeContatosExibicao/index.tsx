@@ -1,10 +1,11 @@
+import React from 'react'
 import { useSelector } from 'react-redux'
-import Contato from '../../components/Contato'
-import { Nome } from '../../components/Contato/styles'
-import * as S from './style'
 import { RootReducer } from '../../store'
+import { Nome } from '../../components/Contato/styles'
+import { MainContainer } from '../ListaDeContatos/style'
+import ContatoExibicao from '../../components/ContatosExibicao'
 
-const ListaDeContatos = () => {
+const ListaDeContatosExibicao = () => {
   const { itens } = useSelector((state: RootReducer) => state.contatos)
   const { termo } = useSelector((state: RootReducer) => state.filtro)
 
@@ -34,12 +35,12 @@ const ListaDeContatos = () => {
 
   return (
     <>
-      <S.MainContainer>
+      <MainContainer>
         <Nome as="p">{mensagem}</Nome>
         <ul>
           {contatos.map((c) => (
             <li key={c.nome}>
-              <Contato
+              <ContatoExibicao
                 id={c.id}
                 nome={c.nome}
                 email={c.email}
@@ -48,9 +49,9 @@ const ListaDeContatos = () => {
             </li>
           ))}
         </ul>
-      </S.MainContainer>
+      </MainContainer>
     </>
   )
 }
 
-export default ListaDeContatos
+export default ListaDeContatosExibicao

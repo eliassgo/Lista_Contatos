@@ -1,10 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import Contato from '../../models/Contato'
 
+// Definindo o tipo
 type ContatoState = {
   itens: Contato[]
 }
 
+// Definindo o estado inicial
 const initialState: ContatoState = {
   itens: [
     {
@@ -14,36 +16,36 @@ const initialState: ContatoState = {
       id: 1
     },
     {
-      nome: 'Elias',
-      email: 'elias@gmail.com',
+      nome: 'Lucas',
+      email: 'lucas@gmail.com',
       numero: '98984532123',
 
       id: 2
     },
     {
-      nome: 'Elias',
-      email: 'elias@gmail.com',
+      nome: 'Abel',
+      email: 'abel@gmail.com',
       numero: '98984532123',
 
       id: 3
     },
     {
-      nome: 'Elias',
-      email: 'elias@gmail.com',
+      nome: 'Irina',
+      email: 'irina@gmail.com',
       numero: '98984532123',
 
       id: 4
     },
     {
-      nome: 'Elias',
-      email: 'elias@gmail.com',
+      nome: 'Beatriz',
+      email: 'beatriz@gmail.com',
       numero: '98984532123',
 
       id: 5
     },
     {
-      nome: 'Elias',
-      email: 'elias@gmail.com',
+      nome: 'Cecilia',
+      email: 'cecilia@gmail.com',
       numero: '98984532123',
 
       id: 6
@@ -55,11 +57,13 @@ const contatosSlice = createSlice({
   initialState,
   reducers: {
     remover: (state, action: PayloadAction<number>) => {
+      // Código para remover um contato pelo ID
       state.itens = [
         ...state.itens.filter((contato) => contato.id !== action.payload)
       ]
     },
     editar: (state, action: PayloadAction<Contato>) => {
+      // Código para editar um contato
       const indexDoContato = state.itens.findIndex(
         (c) => c.id === action.payload.id
       )
@@ -68,6 +72,7 @@ const contatosSlice = createSlice({
       }
     },
     cadastrar: (state, action: PayloadAction<Omit<Contato, 'id'>>) => {
+      // Código para cadastrar um novo contato
       const contatoJaExiste = state.itens.find(
         (contato) => contato.numero === action.payload.nome
       )
