@@ -7,7 +7,7 @@ const Header = () => {
       <S.Header>
         <S.ContainerDiv>
           <S.Imagem>
-            <img src={Logo} />
+            <img src={Logo} alt="figura de uma agenda de contatos" />
           </S.Imagem>
           <S.Button to="/">Contatos</S.Button>
           <S.Button to="/editar">Editar</S.Button>

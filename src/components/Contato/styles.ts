@@ -12,6 +12,7 @@ export const Nome = styled.textarea`
   border: none;
   font-size: 20px;
   resize: none;
+  color: #ccc;
 `
 export const Div = styled.div`
   display: flex;

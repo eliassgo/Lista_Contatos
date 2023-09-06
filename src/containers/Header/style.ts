@@ -14,6 +14,9 @@ export const ContainerDiv = styled(Container)`
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   gap: 8px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `
 
 export const Button = styled(Link)`

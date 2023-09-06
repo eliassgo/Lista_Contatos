@@ -4,7 +4,7 @@ import { CardContato } from '../Contato/styles'
 
 type Props = ContatoClass
 
-const ContatoExibicao = ({ nome, email, numero, id }: Props) => {
+const ContatoExibicao = ({ nome, email, numero }: Props) => {
   return (
     <CardContato>
       <S.Nome>{nome}</S.Nome>

@@ -6,17 +6,13 @@ export const BotaoContainer = styled.div`
   justify-content: center;
 `
 export const Botao = styled(Link)`
-  background-color: #121d2b;
-  color: #fff;
+  background-color: #611c78;
   padding: 10px;
-  border: solid 2px #ccc;
+  border: solid 2px var(--Primary, #fff);
   border-radius: 8px;
-  color: var(--Primary, #b554d7);
-  /* Normal */
-  font-family: Poppins;
+  color: var(--Primary, #fff);
   font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 24px;
   cursor: pointer;
   text-decoration: none;

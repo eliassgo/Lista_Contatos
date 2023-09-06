@@ -2,8 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { Nome } from '../../components/Contato/styles'
-import { MainContainer } from '../ListaDeContatos/style'
 import ContatoExibicao from '../../components/ContatosExibicao'
+import { Container } from './styles'
 
 const ListaDeContatosExibicao = () => {
   const { itens } = useSelector((state: RootReducer) => state.contatos)
@@ -35,7 +35,7 @@ const ListaDeContatosExibicao = () => {
 
   return (
     <>
-      <MainContainer>
+      <Container>
         <Nome as="p">{mensagem}</Nome>
         <ul>
           {contatos.map((c) => (
@@ -49,7 +49,7 @@ const ListaDeContatosExibicao = () => {
             </li>
           ))}
         </ul>
-      </MainContainer>
+      </Container>
     </>
   )
 }

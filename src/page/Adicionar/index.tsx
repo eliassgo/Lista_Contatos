@@ -1,8 +1,8 @@
-import BotaoAdicionar from '../../components/BotaoAdicionar'
+import Formulario from '../../containers/Formulario'
 
 const Adicionar = () => (
   <>
-    <BotaoAdicionar />
+    <Formulario />
   </>
 )
 
